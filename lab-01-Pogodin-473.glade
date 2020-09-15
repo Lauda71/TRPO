@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.1 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkWindow" id="wnd">
+    <property name="width_request">250</property>
+    <property name="height_request">200</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">emblem-favorite</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkLabel">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="label" translatable="yes"> Wake up, Pogodin Petr 473..    
+      We have a city to burrn!      </property>
+        <attributes>
+          <attribute name="font-desc" value="Electron Bold 12"/>
+          <attribute name="style" value="oblique"/>
+          <attribute name="stretch" value="extra-condensed"/>
+          <attribute name="foreground" value="#eeeeeeeeecec"/>
+          <attribute name="background" value="#000000000000"/>
+        </attributes>
+      </object>
+    </child>
+  </object>
+</interface>
