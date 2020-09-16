@@ -10,6 +10,7 @@
   <object class="GtkImage" id="img_div">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
+    <property name="tooltip_text" translatable="yes">Dividing!!!</property>
     <property name="stock">gtk-justify-center</property>
   </object>
   <object class="GtkImage" id="img_mul">
@@ -24,6 +25,7 @@
   </object>
   <object class="GtkWindow" id="wnd">
     <property name="can_focus">False</property>
+    <property name="icon_name">emblem-favorite</property>
     <child>
       <placeholder/>
     </child>
@@ -124,6 +126,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
+                <property name="tooltip_text" translatable="yes">Addition!</property>
                 <property name="image">img_add</property>
                 <property name="always_show_image">True</property>
               </object>
@@ -139,6 +142,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
+                <property name="tooltip_text" translatable="yes">Subtraction!!</property>
                 <property name="image">img_sub</property>
                 <property name="always_show_image">True</property>
               </object>
@@ -154,6 +158,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
+                <property name="tooltip_text" translatable="yes">Multiplication!!!</property>
                 <property name="image">img_mul</property>
                 <property name="always_show_image">True</property>
               </object>
@@ -169,6 +174,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
+                <property name="tooltip_text" translatable="yes">Dividing!!!!</property>
                 <property name="image">img_div</property>
                 <property name="always_show_image">True</property>
               </object>
@@ -183,6 +189,111 @@
             <property name="expand">False</property>
             <property name="fill">True</property>
             <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox" id="gtk_tr_box">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="spacing">15</property>
+            <property name="homogeneous">True</property>
+            <child>
+              <object class="GtkButton" id="btn_sin">
+                <property name="label" translatable="yes">sin(A)</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btn_cos">
+                <property name="label" translatable="yes">cos(A)</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btn_cotan">
+                <property name="label" translatable="yes">cotan(A)</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btn_tan">
+                <property name="label" translatable="yes">tan(A)</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">3</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox" id="gtk_mem">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="orientation">vertical</property>
+            <property name="spacing">15</property>
+            <property name="homogeneous">True</property>
+            <child>
+              <object class="GtkButton" id="btn_mem_give">
+                <property name="label" translatable="yes">M to A</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btn_in_mem">
+                <property name="label" translatable="yes">Res to M</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">3</property>
           </packing>
         </child>
       </object>
