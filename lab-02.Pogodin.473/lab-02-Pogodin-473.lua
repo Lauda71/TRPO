@@ -11,6 +11,8 @@ ui = bld.objects
 ui.wnd.title = 'lab-02-Pogodin-473'
 ui.wnd:show_all()
 
+
+
 function verify(x, y) -- numbers or what?!
 	if(tonumber(x) == nil) then
 		return false 
@@ -23,7 +25,29 @@ function verify(x, y) -- numbers or what?!
 		end
 end
 
+function ui.btn_mem_to_a:on_clicked(...) -- A = memory
+	a = tonumber(ui.lab_mem_is.label)
+	ui.entry_A.text = a
+end
 
+function ui.btn_res_to_mem:on_clicked(...) -- memory = res
+	--a = tonumber(ui.lab_res_is.label)
+	ui.lab_mem_is.label = ui.lab_res_is.label
+end
+
+function ui.btn_m_pl:on_clicked(...) -- memory = memry + res
+	a = tonumber(ui.lab_res_is.label)
+	b = tonumber(ui.lab_mem_is.label)
+	c = b + a
+	ui.lab_mem_is.label = tostring(c)
+end
+
+function ui.btn_m_min:on_clicked(...) -- memory = memry - res
+	a = tonumber(ui.lab_res_is.label)
+	b = tonumber(ui.lab_mem_is.label)
+	c = b - a
+	ui.lab_mem_is.label = tostring(c)
+end
 
 function ui.btn_sin:on_clicked(...)--  sin
 	a = tonumber(ui.entry_A.text)
@@ -115,5 +139,4 @@ function ui.btn_div:on_clicked(...)--  /
 		ui.lab_res_is.label = 'Invalid values entered !!!'
 	end
 end
-gtk.main()
---gtk.main()	-- zapusk cicla obrabotki sobitij interface
+gtk.main() -- zapusk cicla obrabotki sobitij interface	

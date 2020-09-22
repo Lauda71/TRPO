@@ -1,0 +1,10 @@
+.wnd{
+	background: black;
+	color: orange;
+}
+
+.btn{
+	background: orange;
+	color: black;
+	border: 2px solid white;
+}

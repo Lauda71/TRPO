@@ -2,6 +2,7 @@
 <!-- Generated with glade 3.22.1 -->
 <interface>
   <requires lib="gtk+" version="3.20"/>
+  <!-- interface-css-provider-path style.css -->
   <object class="GtkImage" id="img_add">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
@@ -106,6 +107,28 @@
                 <property name="top_attach">2</property>
               </packing>
             </child>
+            <child>
+              <object class="GtkLabel" id="lab_mem">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Memory = </property>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">3</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="lab_mem_is">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">0</property>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">3</property>
+              </packing>
+            </child>
           </object>
           <packing>
             <property name="expand">True</property>
@@ -129,6 +152,9 @@
                 <property name="tooltip_text" translatable="yes">Addition!</property>
                 <property name="image">img_add</property>
                 <property name="always_show_image">True</property>
+                <style>
+                  <class name="btn"/>
+                </style>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -145,6 +171,9 @@
                 <property name="tooltip_text" translatable="yes">Subtraction!!</property>
                 <property name="image">img_sub</property>
                 <property name="always_show_image">True</property>
+                <style>
+                  <class name="btn"/>
+                </style>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -161,6 +190,9 @@
                 <property name="tooltip_text" translatable="yes">Multiplication!!!</property>
                 <property name="image">img_mul</property>
                 <property name="always_show_image">True</property>
+                <style>
+                  <class name="btn"/>
+                </style>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -177,6 +209,9 @@
                 <property name="tooltip_text" translatable="yes">Dividing!!!!</property>
                 <property name="image">img_div</property>
                 <property name="always_show_image">True</property>
+                <style>
+                  <class name="btn"/>
+                </style>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -188,6 +223,7 @@
           <packing>
             <property name="expand">False</property>
             <property name="fill">True</property>
+            <property name="padding">5</property>
             <property name="position">1</property>
           </packing>
         </child>
@@ -203,6 +239,9 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
+                <style>
+                  <class name="btn"/>
+                </style>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -216,6 +255,10 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
+                <property name="tooltip_text" translatable="yes">calculating cos A!!</property>
+                <style>
+                  <class name="btn"/>
+                </style>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -229,6 +272,10 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
+                <property name="tooltip_text" translatable="yes">calculating cotangens A!!</property>
+                <style>
+                  <class name="btn"/>
+                </style>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -242,6 +289,10 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
+                <property name="tooltip_text" translatable="yes">calculating tangens A!!</property>
+                <style>
+                  <class name="btn"/>
+                </style>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -253,6 +304,7 @@
           <packing>
             <property name="expand">False</property>
             <property name="fill">True</property>
+            <property name="padding">5</property>
             <property name="position">2</property>
           </packing>
         </child>
@@ -260,15 +312,18 @@
           <object class="GtkBox" id="gtk_mem">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="orientation">vertical</property>
             <property name="spacing">15</property>
             <property name="homogeneous">True</property>
             <child>
-              <object class="GtkButton" id="btn_mem_give">
+              <object class="GtkButton" id="btn_mem_to_a">
                 <property name="label" translatable="yes">M to A</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
+                <property name="tooltip_text" translatable="yes">A = Memory</property>
+                <style>
+                  <class name="btn"/>
+                </style>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -277,11 +332,15 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton" id="btn_in_mem">
+              <object class="GtkButton" id="btn_res_to_mem">
                 <property name="label" translatable="yes">Res to M</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
+                <property name="tooltip_text" translatable="yes">Memory = Result</property>
+                <style>
+                  <class name="btn"/>
+                </style>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -289,14 +348,52 @@
                 <property name="position">1</property>
               </packing>
             </child>
+            <child>
+              <object class="GtkButton" id="btn_m_pl">
+                <property name="label" translatable="yes">M + Res</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="tooltip_text" translatable="yes">Memory = Memory + Result</property>
+                <style>
+                  <class name="btn"/>
+                </style>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btn_m_min">
+                <property name="label" translatable="yes">M - Res</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="tooltip_text" translatable="yes">Memory = Memory - Result</property>
+                <style>
+                  <class name="btn"/>
+                </style>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">3</property>
+              </packing>
+            </child>
           </object>
           <packing>
             <property name="expand">False</property>
             <property name="fill">True</property>
+            <property name="padding">5</property>
             <property name="position">3</property>
           </packing>
         </child>
       </object>
     </child>
+    <style>
+      <class name="wnd"/>
+    </style>
   </object>
 </interface>
