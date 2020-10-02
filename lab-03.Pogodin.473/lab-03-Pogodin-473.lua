@@ -7,9 +7,6 @@ gtk = lgi.Gtk
 gtk.init() -- inizializacia bibl gtk
 
 
-
-
-
 prov = gtk.CssProvider()
 prov:load_from_path('style.css')
 
