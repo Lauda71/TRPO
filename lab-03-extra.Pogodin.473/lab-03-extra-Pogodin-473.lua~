@@ -16,156 +16,138 @@ ctx.add_provider_for_screen(scr, prov, gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
 
 
 bld = gtk.Builder() -- sozdanie new exmpl postroitela interface 
-bld:add_from_file('lab-03-extra.glade')-- loading opisania interfac'a
+bld:add_from_file('lab-03-extra-Pogodin-473.glade')-- loading opisania interfac'a
 
 ui = bld.objects
 
-ch = {ui.ch_a, ui.ch_b, ui.ch_c,ui.ch_d}
+--ch = {ui.ch_a, ui.ch_b, ui.ch_c,ui.ch_d}
 
-function ui.btn_do:on_clicked
+function ui.btn_do:on_clicked(...)
 
 	if(tonumber(ui.entry.text) == 0) then
-		ch[0].active = false;
-		ch[1].active = false;
-		ch[2].active = false;
-		ch[3].active = false;
-	end
-
-	if(tonumber(ui.entry.text) == 1) then
-		ch[0].active = true;
-		ch[1].active = false;
-		ch[2].active = false;
-		ch[3].active = false;
-	end
-
-	if(tonumber(ui.entry.text) == 2) then
-		ch[0].active = false;
-		ch[1].active = true;
-		ch[2].active = false;
-		ch[3].active = false;
-	end
-
-	if(tonumber(ui.entry.text) == 3) then
-		ch[0].active = true;
-		ch[1].active = true;
-		ch[2].active = false;
-		ch[3].active = false;
-	end
-
-	if(tonumber(ui.entry.text) == 4) then
-		ch[0].active = false;
-		ch[1].active = false;
-		ch[2].active = true;
-		ch[3].active = false;
-	end
-
-	if(tonumber(ui.entry.text) == 5) then
-		ch[0].active = true;
-		ch[1].active = false;
-		ch[2].active = true;
-		ch[3].active = false;
-	end
-
-	if(tonumber(ui.entry.text) == 6) then
-		ch[0].active = false;
-		ch[1].active = true;
-		ch[2].active = true;
-		ch[3].active = false;
-	end
-
-	if(tonumber(ui.entry.text) == 7) then
-		ch[0].active = true;
-		ch[1].active = true;
-		ch[2].active = true;
-		ch[3].active = false;
-	end
-
-	if(tonumber(ui.entry.text) == 8) then
-		ch[0].active = false;
-		ch[1].active = false;
-		ch[2].active = false;
-		ch[3].active = true;
-	end
-
-	if(tonumber(ui.entry.text) == 9) then
-		ch[0].active = true;
-		ch[1].active = false;
-		ch[2].active = false;
-		ch[3].active = true;
-	end
-
-	if(tonumber(ui.entry.text) == 10) then
-		ch[0].active = false;
-		ch[1].active = true;
-		ch[2].active = false;
-		ch[3].active = true;
-	end
-
-	if(tonumber(ui.entry.text) == 11) then
-		ch[0].active = true;
-		ch[1].active = true;
-		ch[2].active = false;
-		ch[3].active = true;
-	end
-
-	if(tonumber(ui.entry.text) == 12) then
-		ch[0].active = false;
-		ch[1].active = false;
-		ch[2].active = true;
-		ch[3].active = true;
-	end
+		ui.ch_a.active = false;
+		ui.ch_b.active = false;
+		ui.ch_c.active = false;
+		ui.ch_d.active = false;
 	
-	if(tonumber(ui.entry.text) == 13) then
-		ch[0].active = true;
-		ch[1].active = false;
-		ch[2].active = true;
-		ch[3].active = true;
-	end
 
-	if(tonumber(ui.entry.text) == 14) then
-		ch[0].active = false;
-		ch[1].active = true;
-		ch[2].active = true;
-		ch[3].active = true;
-	end
+	elseif(tonumber(ui.entry.text) == 1) then
+		ui.ch_a.active = true;
+		ui.ch_b.active = false;
+		ui.ch_c.active = false;
+		ui.ch_d.active = false;
+	
 
-	if(tonumber(ui.entry.text) == 15) then
-		ch[0].active = true;
-		ch[1].active = true;
-		ch[2].active = true;
-		ch[3].active = true;
-	end
+	elseif(tonumber(ui.entry.text) == 2) then
+		ui.ch_a.active = false;
+		ui.ch_b.active = true;
+		ui.ch_c.active = false;
+		ui.ch_d.active = false;
+	
+
+	elseif(tonumber(ui.entry.text) == 3) then
+		ui.ch_a.active = true;
+		ui.ch_b.active = true;
+		ui.ch_c.active = false;
+		ui.ch_d.active = false;
+	
+
+	elseif(tonumber(ui.entry.text) == 4) then
+		ui.ch_a.active = false;
+		ui.ch_b.active = false;
+		ui.ch_c.active = true;
+		ui.ch_d.active = false;
+	
+
+	elseif(tonumber(ui.entry.text) == 5) then
+		ui.ch_a.active = true;
+		ui.ch_b.active = false;
+		ui.ch_c.active = true;
+		ui.ch_d.active = false;
+	
+
+	elseif(tonumber(ui.entry.text) == 6) then
+		ui.ch_a.active = false;
+		ui.ch_b.active = true;
+		ui.ch_c.active = true;
+		ui.ch_d.active = false;
+	
+
+	elseif(tonumber(ui.entry.text) == 7) then
+		ui.ch_a.active = true;
+		ui.ch_b.active = true;
+		ui.ch_c.active = true;
+		ui.ch_d.active = false;
+	
+
+	elseif(tonumber(ui.entry.text) == 8) then
+		ui.ch_a.active = false;
+		ui.ch_b.active = false;
+		ui.ch_c.active = false;
+		ui.ch_d.active = true;
+	
+
+	elseif(tonumber(ui.entry.text) == 9) then
+		ui.ch_a.active = true;
+		ui.ch_b.active = false;
+		ui.ch_c.active = false;
+		ui.ch_d.active = true;
+	
+
+	elseif(tonumber(ui.entry.text) == 10) then
+		ui.ch_a.active = false;
+		ui.ch_b.active = true;
+		ui.ch_c.active = false;
+		ui.ch_d.active = true;
+	
+
+	elseif(tonumber(ui.entry.text) == 11) then
+		ui.ch_a.active = true;
+		ui.ch_b.active = true;
+		ui.ch_c.active = false;
+		ui.ch_d.active = true;
+	
+
+	elseif(tonumber(ui.entry.text) == 12) then
+		ui.ch_a.active = false;
+		ui.ch_b.active = false;
+		ui.ch_c.active = true;
+		ui.ch_d.active = true;
+	
+	
+	elseif(tonumber(ui.entry.text) == 13) then
+		ui.ch_a.active = true;
+		ui.ch_b.active = false;
+		ui.ch_c.active = true;
+		ui.ch_d.active = true;
+	
+
+	elseif(tonumber(ui.entry.text) == 14) then
+		ui.ch_a.active = false;
+		ui.ch_b.active = true;
+		ui.ch_c.active = true;
+		ui.ch_d.active = true;
+	
+
+	elseif(tonumber(ui.entry.text) == 15) then
+		ui.ch_a.active = true;
+		ui.ch_b.active = true;
+		ui.ch_c.active = true;
+		ui.ch_d.active = true;
+	
 
 	else
-		--!?!??!
+		ui.entry.text = 'incorect data !!!'
+
+		ui.ch_a.active = false;
+		ui.ch_b.active = false;
+		ui.ch_c.active = false;
+		ui.ch_d.active = false;
 	end
 end
 
-function update()
-	x = 0
-	y = 0
-	z = 0
-	if ui.chk_x.active == true then x = 1 end
-	if ui.chk_y.active == true then y = 1 end
-	if ui.chk_z.active == true then z = 1 end
 
-	v = x + y * 2 + z * 4
-	opt[v + 1].active = true
 
-	ui.lab_val.label = v
-end
-
-function ui.chk_x:on_clicked(...)   -- !&!&!&!
-	update()
-end
-
-function ui.chk_y:on_clicked(...)
-	update()
-end
-
-function ui.chk_z:on_clicked(...)
-	update()
-end
 
 ui.wnd.title = 'lab-03-Pogodin-473'
 ui.wnd.on_destroy = gtk.main_quit
